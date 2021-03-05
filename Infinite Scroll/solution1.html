@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #App {
+        position: relative;
+        padding: 10px 10px 0;
+      }
+
+      #App.loading {
+        height: 100vh;
+      }
+      #app.loading::after {
+        content: "로딩중....";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #fetchMore {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        text-align: center;
+        line-height: 20px;
+      }
+      #fetchMore.loading {
+        display: block;
+      }
+      #fetchMore.loading::after {
+        content: "...로딩중...";
+      }
+      li {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="App" class="loading">
+      <ul id="list"></ul>
+      <div id="fetchMore"></div>
+    </div>
+  </body>
+</html>
