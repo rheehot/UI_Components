@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .themed {
+        background-color: #fff;
+      }
+      .themed::after {
+        content: "light mode(default)";
+      }
+
+      /*OS레벨에서 사용자가 지정한 THEME을 감지하는 기능*/
+      @media (prefers-color-scheme: dark) {
+        /*사용자가 os레벨에서 다크모드를 지정했다면*/
+        .themed {
+          background-color: #000;
+          color: #fff;
+        }
+
+        .themed::after {
+          content: "Dark mode detacted";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 대부분의 운영체제는 OS차원에서 다크모드를 지원해주는 기능이 있다. -->
+    <!-- OS레벨에서 지정한 테마가 있다면, 그 테마를 우선해서 보여주고 -->
+    <!--우리 사이트에서 라이트모드와 다크모드도 바꿀 수 있도록 하자 -->
+  </body>
+</html>
