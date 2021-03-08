@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(!theme) localStorage.setItem("theme", "light")
     
     //if(theme === "dark") document.body.classList.add("dark")
-    //else document.body.classList.remove("light")
+    //else document.body.classList.remove("light")\
     document.body.classList.toggle('dark', theme === 'dark')
 
     // 초기 렌더링할 때 라이트 모드로 보이다가
